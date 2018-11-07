@@ -10,7 +10,8 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import Example from './components/Example'
-import abc from './components/abc'
+import demo from './components/demo'
+import createHotBoy from './components/createHotBoy'
 import Vue from 'vue'
 import VueRouter from 'vue-router';
 
@@ -28,22 +29,19 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/abc',
-            name: 'abc',
-            component: abc
+            path: '/list-hotboy',
+            name: 'demo',
+            component: demo
         },
         {
-            path: '/example',
-            name: 'example',
-            component: Example
+            path: '/create-hotboy',
+            name: 'createStudent',
+            component: createHotBoy
         },
     ],
 });
 
 const app = new Vue({
     el: '#app',
-    // components: {
-    //     example: Example
-    // },
     router
 });

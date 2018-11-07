@@ -18,4 +18,9 @@ class CrudsController extends Controller
     {
         Student::create($request->all());
     }
+
+    public function destroy($id)
+    {
+        Student::findOrFail($id)->delete();
+    }
 }
